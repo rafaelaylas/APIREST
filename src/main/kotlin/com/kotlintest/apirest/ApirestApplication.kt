@@ -18,8 +18,9 @@ class ApirestApplication:CommandLineRunner
 	override fun run(vararg args: String?) {
 		val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
 		val persona1 = Persona(234232342, "Gaston", "Sailen", LocalDate.parse("29-05-1995", formatter) )
-
+		val persona2 = Persona(244564453, "Pepito", "Selastraga", LocalDate.parse("23-07-2020", formatter))
 		personaRepository!!.save(persona1)
+		personaRepository!!.save(persona2)
 	}
 }
 
